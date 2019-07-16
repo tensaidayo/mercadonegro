@@ -1,0 +1,76 @@
+<p id="notice"><%= notice %></p>
+
+<div class="row">
+  <div class="col-xs-12">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h5><strong><%= @advert.title %> | Views: <%= @advert.quantity_view %></h5></strong>
+        </div>
+
+        <div class="panel-body">
+          <h5><strong>Description:</strong></h5>
+          <h5><%= @advert.description %></h5>
+          <h5><strong>Advertiser:</strong></h5>
+          <h5><%= @advert.user.name %></h5>
+          <h5><%= @advert.user.address %></h5>
+          <h5><%= @advert.user.telephone %></h5>
+          <h5><%= @advert.user.email %></h5>
+
+        </div>
+
+        <div class="panel-footer">
+          <div id="lightgallery">
+            <% @advert.avatars.each do |p| %>
+              <a data-src="<%= p.url %>" data-sub-html="<%= @advert.title %>">
+                <%= image_tag p.medium.url, class: "img-thumbnail" %>
+              </a>
+            <% end %>
+          </div>
+
+          <h2>R$: <%= @advert.price %></h2>
+        </div>
+
+      </div>
+
+    <%= link_to 'Edit', edit_advert_path(@advert), class: "btn btn-primary active" %> 
+    <%= link_to 'Back', adverts_path, class: "btn btn-primary active" %>
+
+  </div>
+</div>
+<hr>
+<h2>Adverts similar</h2>
+<div class="row">
+  <div class="col-xs-4">
+    <% @advertsSimilar.each do |advert| %>
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h5>
+            <!--            <strong>Views: <%#= advert.quantity_view %></strong> - <%#= advert.created_at.strftime("Created:  %b %d, %Y at %H:%M") %> | <%#= advert.updated_at.strftime("Last Update: %b %d, %Y at %H:%M") %>-->
+            <strong><%= advert.title %></strong>
+          </h5>
+        </div>
+
+        <div class="panel-body">
+          <strong>Views</strong> | <%= advert.quantity_view %><br>
+          <strong>Category</strong> | <%= advert.category.description %><br>
+          <td><strong>Description</strong> | <%= advert.description %></td><br>
+          <td><strong>Price</strong> | R$ <%= advert.price %></td>
+
+          <div id="lightgallery">
+            <% advert.avatars.each do |p| %>
+              <%= image_tag p.thumb.url, class: "img-thumbnail" %>
+            <% end %>
+          </div>
+
+          <%= link_to '+ Info', advert, class: 'pull-left btn-sm btn-link' %>
+
+        </div>
+
+      </div>
+    <% end %>
+  </div>
+</div>
+
+<script type="application/javascript">
+  var gallery = $("#lightgallery").lightGallery();
+</script>

@@ -1,0 +1,39 @@
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Mercado Negro</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li><%= link_to "Home", root_path %></li>
+        <% if user_signed_in? %>
+          <li><%= link_to "Produtos", adverts_path %></li>
+          <li><%= link_to "Usuarios", users_path %></li>
+          <li><%= link_to "Categorias", categories_path %></li>
+        <% end %>
+      </ul>
+
+      <ul class="nav navbar-nav navbar-right">
+        <p class="navbar-text pull-right">
+          <% if user_signed_in? %>
+            <strong><%= current_user.email %></strong>
+            <%= link_to ' Editar Perfil', edit_user_registration_path, :class => 'fa fa-edit navbar-link btn btn-link' %> |
+            <%= link_to " Sair", destroy_user_session_path, method: :delete, :class => 'fa fa-sign-out navbar-link btn btn-link'  %>
+          <% else %>
+            <%= link_to " Criar Conta", new_user_registration_path, :class => 'fa fa-user-plus navbar-link btn btn-link'  %> |
+            <%= link_to " Logar", new_user_session_path, :class => 'fa fa-sign-in navbar-link btn btn-link'  %>
+          <% end %>
+        </p>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
