@@ -32,10 +32,10 @@
   <div class="col-xs-4">
     <div class="panel panel-default">
       <div class="panel-heading">
-        Category of adverts
+        Categoria dos Produtos
       </div>
       <div class="panel-body">
-        <li><%= link_to 'All', "/adverts/homepage?category_id=0", class: 'btn-link' %></li>
+        <li><%= link_to 'Tudo', "/adverts/homepage?category_id=0", class: 'btn-link' %></li>
         <% @categories.each do |category| %>
           <li><%= link_to category.description, homepage_adverts_path(category_id: category.id), class: 'btb btn-link' %></li>
         <% end %>
@@ -43,7 +43,7 @@
     </div>
 
     <div class="panel panel-default">
-      <div class="panel-heading">Search for adverts (title)</div>
+      <div class="panel-heading">Busca</div>
       <div class="panel-body">
         <%= form_tag(homepage_adverts_path, method: 'post') do %>
           <%= text_field_tag :advert_description %>
