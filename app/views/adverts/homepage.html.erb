@@ -15,14 +15,9 @@
           <td><strong>Description</strong> | <%= advert.description %></td><br>
           <td><strong>Price</strong> | R$ <%= advert.price %></td>
 
-          <div id="lightgallery">
-            <% advert.avatars.each do |p| %>
-              <%= image_tag p.thumb.url, class: "img-thumbnail" %>
-            <% end %>
-          </div>
-
-          <%= link_to '+ Info', advert, class: 'pull-left btn-sm btn-link' %>
-
+        </div>
+        <div class="panel-body">
+            <%= link_to 'Exibir', advert, :class => "btn btn-primary active" %></button>
         </div>
 
       </div>
