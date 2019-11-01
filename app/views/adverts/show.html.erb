@@ -31,9 +31,17 @@
         </div>
 
       </div>
+      <div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v5.0&appId=2277692172482828&autoLogAppEvents=1"></script>
+<div class="fb-share-button" data-href="http://localhost:3000/users/auth/facebook/callback" data-layout="button_count" data-size="large"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A3000%2Fusers%2Fauth%2Ffacebook%2Fcallback&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Compartilhar</a></div>
 
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v5.0&appId=2277692172482828&autoLogAppEvents=1"></script>
+<div class="fb-comments" data-href="https://localhost:3000/users/auth/facebook/callback" data-width="30" data-numposts="5"></div>
+    <%= social_share_button_tag(@advert.title) %>
     <%= link_to 'Edit', edit_advert_path(@advert), class: "btn btn-primary active" %>
     <%= link_to 'Back', adverts_path, class: "btn btn-primary active" %>
+
 
   </div>
 </div>

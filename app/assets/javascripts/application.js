@@ -18,3 +18,4 @@
 //= require bootstrap-sprockets
 //= require lightgallery
 //= require_tree .
+//= require social-share-button
