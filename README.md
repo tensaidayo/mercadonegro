@@ -1,24 +1,20 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Criação de um Projeto E-commerce utilizando o framework Ruby on Rails.
 
-Things you may want to cover:
+*Criação das tabelas;
+-Adverts (Views, Category, Description, Price);
+-Categories (name); 
+-User (name, e-mail, telephone);
 
-* Ruby version
 
-* System dependencies
+GEM instalados;
+*Utilização do gem Devise, 
+*Utilização do gem CanCanCan; 
+*Utilização do gem Booststrap;
+*Utilização do gem mini_magick;
 
-* Configuration
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Inclusão do gem para a utilização do FACEBOOK API;
+*omniauth-facebook(Realização do Login pela autenticação do Facebook);
+*social-share-button(Realização do botão de Compartilhamento);
