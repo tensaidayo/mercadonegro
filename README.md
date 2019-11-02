@@ -1,4 +1,4 @@
-# README
+# RESUMO DO PROJETO
 
 Criação de um Projeto E-commerce utilizando o framework Ruby on Rails.
 
