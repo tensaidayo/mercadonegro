@@ -15,6 +15,11 @@ GEM instalados;
 *Utilização do gem mini_magick;
 
 
+
 Inclusão do gem para a utilização do FACEBOOK API;
 *omniauth-facebook(Realização do Login pela autenticação do Facebook);
 *social-share-button(Realização do botão de Compartilhamento);
+
+Processos e Prints da Tela segue no link abaixo;
+
+https://docs.google.com/document/d/1l4S5Cslwaz3KGMyg8VIPNkVjsA73CxQFXwUnNcFjOIs/edit?usp=sharing
